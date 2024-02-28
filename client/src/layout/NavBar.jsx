@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import logo from "../assets/2022012481716430112667244_origin.jpg"
 import { RiFileSearchFill } from "react-icons/ri";
 import { FaCartArrowDown } from "react-icons/fa";
-import Cart from '../component/Cart';
 export default class NavBar extends Component {
  constructor(props){
   super(props)

@@ -16,15 +16,15 @@ export default class OneProduct extends Component {
     return (
       <div>
       <Card style={{ width: '18rem', height:'450px' }}>
-      <Card.Img variant="top" src={this.props.product.imageURL} alt="top" loading='lazy' width={200} height={200}/>
+      <Card.Img variant="top" src={this.props.product?.imageURL} alt="top" loading='lazy' width={200} height={200}/>
       <Card.Body className='d-flex flex-column justify-content-between'>
-        <Card.Title>{this.props.product.productName}</Card.Title>
+        <Card.Title>{this.props.product?.productName}</Card.Title>
         <Card.Text>
-      {this.props.product.description}
+      {this.props.product?.description}
         </Card.Text>
         <div className='d-flex justify-content-between'>
         <Button variant="danger" onClick={()=>{
-          this.props.setState({item:this.props.element})
+          this.props.setState({item:this.props.product})
           this.props.changeView("productDetails")
         }}>View more</Button>
         <Button variant="primary"

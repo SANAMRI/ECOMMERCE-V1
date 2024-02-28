@@ -18,49 +18,52 @@ import { GiLeafSkeleton } from "react-icons/gi";
 import { BsFiletypeDoc } from "react-icons/bs";
 
 
+
 export default function SideBar() {
   return (
     <div className='text-white' style={{height:"100vh", width:"300px", background:"#f5f6f7"}}>
-      <img src={logo} alt="logo" loading='lazy' />
-      <p>DASHBOARD</p>
-      <hr />
-      <IoHomeOutline /><a className="a" href="">Dashboard</a>
-      <CiCalendar /><a className ="a" href="">Calendar</a>
-      <FaClipboardList /><select name="" id="">
-        <option value="">Kanban Board</option>
+     <div> <img src={logo} alt="logo" loading='lazy' /></div>
+      
+    <p style={{color:"black" , fontWeight: 'bold', paddingTop: '50px'}}>DASHBOARD</p>
+      <hr style={{color:"black", paddingTop: '30px'}}/>
+      <IoHomeOutline style={{color:"blue"}}/><a className="a" href="">Dashboard</a><br />
+      <CiCalendar style={{color:"blue"}}/><a className ="a" href="">Calendar</a><br />
+      <FaClipboardList style={{color:"blue"}}/><select style={{border:"none"}} name="" id="">
+        <option value="">Kanban Board</option><br />
         <option value="kanban Board">kanban Board</option>
         <option value="Card Details">Card Details</option>
         <option value="Create New Card"></option>
        
-      </select>
-      <IoFileTrayOutline /><select name="File Manager" id="">
+      </select><br />
+      <IoFileTrayOutline style={{color:"blue"}}/><select style={{border:"none"}} name="File Manager" id="">
         <option value="File">File Manager</option>
-      </select>
-      <BsFileEarmarkPerson /><select name="Authentication" id="">
+      </select><br />
+      <BsFileEarmarkPerson style={{color:"blue"}}/><select style={{border:"none"}} name="Authentication" id="">
         <option value="authentication">Authentication</option>
-      </select>
-      <p>PAGES</p>
-      <hr />
-      <FcManager /><select name="profile" id="">
-        <option value="Profile">Profile</option></select>
-        <FaFileInvoice /> <select name="invoice" id="">
+      </select><br />
+
+      <p style={{color:"black" , fontWeight: 'bold' , paddingTop: '50px'}}>PAGES</p>
+      <hr style={{color:"black" , paddingTop: '30px'}}/>
+          
+      <FcManager /><select style={{border:"none"}} name="profile" id="">
+        <option value="Profile">Profile</option></select><br />
+        <FaFileInvoice style={{color:"blue"}}/> <select style={{border:"none"}} name="invoice" id="">
           <option value="Invoice">Invoice</option>
-        </select>
-        <TbCreditCard /> <a href="" className ="a">Billing</a>
-        <MdOutlineElectricBolt /><a href="" className ="a">Princing Plans</a>
-        <FaQuestionCircle /><a className ="a" href="">FAQs</a>
-        <CiFileOn /><a className ="a" href="">Blank Page</a>
+        </select><br />
+        <TbCreditCard style={{color:"blue"}}/> <a href="" className ="a">Billing</a><br />
+        <MdOutlineElectricBolt style={{color:"blue"}}/><a href="" className ="a">Princing Plans</a><br />
+        <FaQuestionCircle style={{color:"blue"}}/><a className ="a" href="">FAQs</a><br />
+        <CiFileOn style={{color:"blue"}}/><a className ="a" href="">Blank Page</a><br />
         
-      <p>COMPONENTS</p>
-      <hr />
-      <PiCardholderDuotone /> <a className ="a" href="">Card</a>
-      <MdFormatListBulleted /><a className ="a" href="">Table</a>
-      <SiTerraform />Form elements
-      <GiLeafSkeleton /><a className ="a" href="">Widgets</a>
-      <BsFiletypeDoc /><select name="Documentation" id="">
+      <p style={{color:"black", fontWeight: 'bold' , paddingTop: '30px'}}>COMPONENTS</p>
+      <hr style={{color:"black"}}/>
+      <PiCardholderDuotone style={{color:"blue"}}/> <a className ="a" href="">Card</a><br />
+      <MdFormatListBulleted style={{color:"blue"}}/><a className ="a" href="">Table</a><br />
+      <SiTerraform style={{color:"blue"}}/> <a className ="a" href="">Form elements</a><br />
+      <GiLeafSkeleton style={{color:"blue"}}/><a className ="a" href="">Widgets</a><br />
+      <BsFiletypeDoc style={{color:"blue"}}/><select style={{border:"none"}}  name="Documentation" id="">
         <option value="document">Documentation</option>
-      </select>
-      
+      </select> 
     </div>
   )
 }

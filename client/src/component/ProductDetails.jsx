@@ -8,18 +8,19 @@ export default class ProductDetails extends Component {
   }
 
   render() {
+    console.log(this.props,"product from details")
     return (
       <div
         className="d-flex justify-content-center align-items-center"
         style={{ height: "90vh" }}
       >
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={this.props.product.imageURL} />
+          <Card.Img variant="top" src={this.props.product?.imageURL} />
           <Card.Body>
-            <Card.Title>{this.props.product.productName}</Card.Title>
-            <Card.Text>{this.props.product.description}</Card.Text>
+            <Card.Title>{this.props.product?.productName}</Card.Title>
+            <Card.Text>{this.props.product?.description}</Card.Text>
             <Card.Title className="text-danger">
-              {this.props.product.price} tnd
+              {this.props.product?.price} tnd
             </Card.Title>
             <div className="d-flex justify-content-between">
               <Button variant="primary">addToCard</Button>

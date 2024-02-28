@@ -2,4 +2,20 @@
 .a {
   text-decoration: none;
   color: black;
+
+}
+.b-share-Board{
+  background:"#000";
+  color: black;
+  border-radius: 20px;
+  width: 120px;
+  height: 30px;
+}
+.b-Create-Now{
+
+background:blue;
+color: white;
+margin-left:  10px;;
+border-radius: 20px;
+  
 }
