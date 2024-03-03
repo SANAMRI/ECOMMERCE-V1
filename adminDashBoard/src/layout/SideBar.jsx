@@ -16,17 +16,18 @@ import { MdFormatListBulleted } from "react-icons/md";
 import { SiTerraform } from "react-icons/si";
 import { GiLeafSkeleton } from "react-icons/gi";
 import { BsFiletypeDoc } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 
 
 export default function SideBar() {
   return (
-    <div className='text-white' style={{height:"100vh", width:"300px", background:"#f5f6f7"}}>
+    <div className='text-white position-fixed' style={{height:"100vh", width:"300px", background:"#f5f6f7"}}>
      <div> <img src={logo} alt="logo" loading='lazy' /></div>
       
     <p style={{color:"black" , fontWeight: 'bold', paddingTop: '50px'}}>DASHBOARD</p>
       <hr style={{color:"black", paddingTop: '30px'}}/>
-      <IoHomeOutline style={{color:"blue"}}/><a className="a" href="">Dashboard</a><br />
+      <IoHomeOutline style={{color:"blue"}}/><Link to="/" style={{textDecoration:"none"}}> DASHBOARD</Link><br />
       <CiCalendar style={{color:"blue"}}/><a className ="a" href="">Calendar</a><br />
       <FaClipboardList style={{color:"blue"}}/><select style={{border:"none"}} name="" id="">
         <option value="">Kanban Board</option><br />
@@ -57,7 +58,7 @@ export default function SideBar() {
         
       <p style={{color:"black", fontWeight: 'bold' , paddingTop: '30px'}}>COMPONENTS</p>
       <hr style={{color:"black"}}/>
-      <PiCardholderDuotone style={{color:"blue"}}/> <a className ="a" href="">Card</a><br />
+      <PiCardholderDuotone style={{color:"blue"}}/> <Link to="/products" style={{textDecoration:"none"}}> Card</Link><br />
       <MdFormatListBulleted style={{color:"blue"}}/><a className ="a" href="">Table</a><br />
       <SiTerraform style={{color:"blue"}}/> <a className ="a" href="">Form elements</a><br />
       <GiLeafSkeleton style={{color:"blue"}}/><a className ="a" href="">Widgets</a><br />

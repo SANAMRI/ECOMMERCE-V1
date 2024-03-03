@@ -3,11 +3,12 @@ import SideBar from './layout/SideBar';
 import './App.css';
 import Footer from './layout/Footer';
 import NavBar from './layout/NavBar';
+import { Outlet } from 'react-router-dom';
 
 
 
 function App() {
-  const [count, setCount] = useState(0);
+ 
 
   
   return (
