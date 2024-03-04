@@ -3,16 +3,23 @@ import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from 'react-router-dom';
+import {useSelector,useDispatch} from "react-redux"
+import { fetchAllProducts } from "../../../store/productSlice";
+
+
 function Products() {
 
-  const [products, setProducts] = useState([]);
+const products = useSelector(state=>state.products.products)
+console.log(products)
+const disptach = useDispatch()
 
   useEffect(()=>{
     // fetch data from the api 
-   axios.get("http://localhost:5173/data.json").then((response)=>{
-    console.log(response.data)
-    setProducts(response.data)
-   }).catch((error)=>console.log(error))
+  //  axios.get("http://localhost:5173/data.json").then((response)=>{
+  //   console.log(response.data)
+  //   setProducts(response.data)
+  //  }).catch((error)=>console.log(error))
+  disptach(fetchAllProducts())
   },[])
 
 
